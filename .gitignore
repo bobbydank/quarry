@@ -1,0 +1,14 @@
+# OS X
+.DS_Store
+
+# VS Code
+.vscode/*
+
+# Project Specific
+text.html
+zips/*
+
+.ftpconfig
+tailwind.config.js
+
+php/*
