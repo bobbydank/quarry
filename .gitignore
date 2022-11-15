@@ -12,3 +12,4 @@ zips/*
 tailwind.config.js
 
 php/*
+index.php

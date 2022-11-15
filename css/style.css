@@ -1,3 +1,8 @@
+:root {
+  --primary-color:#062F87;
+  --secondary-color:#F9B23E;
+}
+
 body, html {
   position:relative; 
   background:black;
@@ -10,6 +15,7 @@ main {
   height:auto;
 }
 #page-wrap {
+  border-bottom:solid 15px var(--primary-color);
   position:absolute; 
   background:white; 
   width: 100%;
@@ -18,5 +24,75 @@ main {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  padding-bottom: 42.8571%;
+  padding-bottom: 56.25%;
+}
+
+#logo {
+  width:15%;
+  height:auto;
+  top:60px;
+  left:60px;
+  position: absolute;
+  z-index: 50;
+  cursor: pointer;
+}
+#video,
+#background {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+}
+#video {
+  z-index: 1;
+}
+#video.playing {
+  z-index: 15;
+}
+#background {
+  z-index: 10;
+}
+#startbutton {
+  position: absolute;
+  bottom:200px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index: 50;
+  padding: 20px 40px;
+  background: rgba(255,255,255,0.75);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+#startbutton i {
+  font-size:2.3vw;
+}
+#startbutton:hover {
+  color: white;
+  background: var(--primary-color);
+}
+#lines {
+  z-index: 20;
+  position: absolute;
+  bottom:0;
+  right:0;
+  left:0;
+  width:100%;
+  height:20%;
+  background: url('/images/lines-bg.png') top center repeat-x;
+  background-size:contain;
+}
+h1 {
+  z-index: 50;
+  position: absolute;
+  color:white;
+  font-weight:300;
+  font-size:10vw;
+  text-align: center;
+  width:100%;
+  top:15%;
+  text-shadow: 0.25vw 0.25vw 10px rgba(0,0,0,0.3);
 }
