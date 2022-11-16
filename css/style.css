@@ -8,6 +8,7 @@ body, html {
   background:black;
   height:100%;
   font-family: 'Oswald', sans-serif;
+  min-width:1000px;
 }
 main {
   position:relative; 
@@ -60,7 +61,7 @@ main {
   bottom:200px;
   left:50%;
   transform:translateX(-50%);
-  z-index: 50;
+  z-index: 100;
   padding: 20px 40px;
   background: rgba(255,255,255,0.75);
   color: var(--primary-color);
@@ -85,6 +86,17 @@ main {
   background: url('/images/lines-bg.png') top center repeat-x;
   background-size:contain;
 }
+#skip {
+  position: absolute;
+  bottom:50px;
+  right:50px;
+  width:8%;
+  height:auto;
+  cursor: pointer;
+  display:none;
+  transition: all 0.5s;
+  z-index: 51;
+}
 h1 {
   z-index: 50;
   position: absolute;
@@ -95,4 +107,98 @@ h1 {
   width:100%;
   top:15%;
   text-shadow: 0.25vw 0.25vw 10px rgba(0,0,0,0.3);
+}
+h2 {
+
+}
+#introText {
+  display:none;
+  color:white;
+  line-height: 1.5em;
+  text-align: center;
+  font-weight:300;
+  font-size:1.8vw;
+  width:90%;
+  max-width:800px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+}
+#requestquote {
+  width:15%;
+  display:none;
+  position: absolute;
+  top:50px;
+  transition: all 0.5s;
+  right:0;
+  z-index: 50;
+}
+#requestquote img {
+  width:100%;
+}
+#mainnav {
+  opacity: 0;
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s;
+  width:80%;
+  z-index: 50;
+}
+#mainnav #primary {
+  display:flex;
+  padding:30px;
+  background:rgba(6,47,135,0.1);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: stretch;
+}
+#mainnav #primary li {
+  cursor: pointer;
+  padding:10px 0;
+  color:white;
+  font-size:1.25vw;
+  text-align: center;
+  margin:8px;
+  text-transform: uppercase;
+  flex:1 0 21%;
+  font-weight: 300;
+  transition: all 0.2s;
+  background:rgba(51,51,51,0.6);
+  border:solid thin rgba(51,51,51,0.6);
+}
+#mainnav #primary li:hover {
+  background:rgba(51,51,51,0.4);
+  color:var(--secondary-color);
+}
+#mainnav #secondary {
+  position: absolute;
+  top:20px;
+  transform:translateY(-100%);
+  left:30px;
+  display:flex;
+  flex-flow: row wrap-reverse;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+#mainnav #secondary li {
+  cursor: pointer;
+  padding:10px 20px;
+  color:white;
+  font-size:1.25vw;
+  text-align: center;
+  margin:8px;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.2s;
+  background:rgba(6,47,135,0.6);
+  border:solid thin rgba(6,47,135,0.6);
+}
+#mainnav #secondary li:hover {
+  color:var(--secondary-color);
+  background:rgba(6,47,135,0.3);
 }

@@ -10,18 +10,38 @@
 
   <link rel="stylesheet" type="text/css" href="/css/libs/fontawesome/css/all.min.css"/>
 
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
 <body>
   <main>
     <div id="page-wrap">
       <img id="logo" src="/images/logo.svg" alt="Martin">
 
-      <h1>Quarry</h1>
-      <div id="startbutton">
+      <h1 class="start">Quarry</h1>
+      <div id="startbutton" class="start">
         <i class="fa-solid fa-arrow-right"></i>
       </div>
+      <img id="skip" src="/images/skip-intro.svg" alt="skip intro">
+      <a id="requestquote" target="_blank" href="https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote"><img src="/images/request-quote.svg" alt="Request Quote"></a>
+
+      <p id="introText">At Martin, we help the mining industry move materials that are essential to their business. For over 70 years, we have worked with customers and suppliers to provide them with the machines, parts and replacement parts needed to run their operations.</p>
+
+      <div id="mainnav">
+        <ul id="secondary"></ul>
+        <ul id="primary">
+          <li id="drumpulleys">Drum Pulleys</li>
+          <li id="cleanflight">Clean Flight Wing Pulley</li>
+          <li id="wingpulley">Wing Pulley</li>
+          <li id="carryiders">Carry Slide Idlers</li>
+          <li id="returnidlers">Return Side Idlers</li>
+          <li id="drives">Drives</li>
+          <li id="impactbed">Impact Bed</li>
+          <li id="coupling">Coupling</li>
+        </ul>
+      </div>
+      
+
       <div id="lines"></div>
       <img id="background" src="/images/home.jpg" alt="background">
       <video nocontrols preload="none" muted id="video">
@@ -31,5 +51,5 @@
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="/js/scripts.js"></script>
 </body>
