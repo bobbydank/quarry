@@ -1,46 +1,178 @@
-let rawdata = '{"start":{"bg":"\/images\/home.jpg","out_video":"\/videos\/0_Intro_trimmed_sped_up_compressed.mp4","out_bg":"\/images\/master-background.jpg","in_video":false}}';
+let tempbg = '';
 
 const data = JSON.parse(rawdata);
+const logo = document.getElementById('logo');
+const startbutton = document.getElementById('startbutton');
 const video = document.getElementById('video');
 const background = document.getElementById('background');
 const introText = document.getElementById('introText');
 const skipIntro = document.getElementById('skip');
-const requestQuote = document.getElementById('requestquote');
+const topright = document.getElementById('topright');
 const mainnav = document.getElementById('mainnav');
+const homeButton = document.getElementById('home_button');
+const tertiaryTitle = document.getElementById('tertiary_title');
+const secondaryNav = document.getElementById('secondary');
+const subtitle = document.getElementById('subtitle');
+const content = document.getElementById('content');
+const scrolldown = document.getElementById('scroll_down');
+const scrollup = document.getElementById('scroll_up');
+const contentInner = document.getElementById('content_inner');
 
-(function ($) {
+const drumpulleys = document.getElementById('drumpulleys');
+const cleanflight = document.getElementById('cleanflight');
+const wingpulley = document.getElementById('wingpulley');
+const carryiders = document.getElementById('carryiders');
+const returnidlers = document.getElementById('returnidlers');
+const drives = document.getElementById('drives');
+const impactbed = document.getElementById('impactbed');
+const coupling = document.getElementById('coupling');
 
-  $(document).ready(function() {
-    skipIntro.addEventListener('click', snap_to_start, false);
+//scroll
+scrolldown.addEventListener('click', function () {
+  contentInner.scrollBy(0,50);
+}, false);
+scrollup.addEventListener('click', function () {
+  contentInner.scrollBy(0,-50);
+}, false);
 
-    //start
-    video.load();
-    $('#startbutton').click(function () {
-      $('.start, #background').fadeOut(100, function () {
-        skipIntro.style.display = 'block';
-        background.src = data.start.out_bg;
-        video.addEventListener('ended', start, false);
-        video.play();
-      });
-    });
+//mainnav
+drumpulleys.addEventListener('click', function () {
+  main_nav_click( data.drumpulleys );
+}, false);
+cleanflight.addEventListener('click', function () {
+  main_nav_click( data.cleanflight );
+}, false);
+wingpulley.addEventListener('click', function () {
+  main_nav_click( data.wingpulley );
+}, false);
+carryiders.addEventListener('click', function () {
+  main_nav_click( data.carryiders );
+}, false);
+returnidlers.addEventListener('click', function () {
+  main_nav_click( data.returnidlers );
+}, false);
+drives.addEventListener('click', function () {
+  main_nav_click( data.drives );
+}, false);
+impactbed.addEventListener('click', function () {
+  main_nav_click( data.impactbed );
+}, false);
+coupling.addEventListener('click', function () {
+  main_nav_click( data.coupling );
+}, false);
 
-    $('#logo').click(function () {
-      skipIntro.style.display = 'none';
-      background.src = data.start.bg;
-      $('.start, #background').css('display', 'block');
-      mainnav.style.opacity = 0;
-      introText.style.display = 'none';
-      requestQuote.style.display = 'none';
+//other stuff
+skipIntro.addEventListener('click', snap_to_start, false);
 
-      change_video( data.start.out_video );
-    });
-  }); 
-    
-})(jQuery);
+//start
+video.load();
+startbutton.addEventListener('click', function () {
+  jQuery('.start').fadeOut(100);
+  secondaryNav.innerHTML = '';
+  background.style.display = 'none';
+  skipIntro.style.display = 'block';
+  background.src = data.start.out_bg;
+  video.addEventListener('ended', start, false);
+  video.play();
+}, false);
+
+logo.addEventListener('click', function () {
+  //console.log('here');
+  change_video( data.start.out_video );
+  secondaryNav.innerHTML = '';
+  skipIntro.style.display = 'none';
+  jQuery('.start').css('display', 'block');
+  mainnav.style.opacity = 0;
+  introText.style.display = 'none';
+  topright.style.display = 'none';
+  homeButton.style.opacity = 0;
+  subtitle.style.opacity = 0;
+  content.classList.remove('on');
+  background.src = data.start.bg;
+  background.style.display = 'block';
+}, false);
+
+homeButton.addEventListener('click', function () {
+  let o = homeButton.style.opacity;
+  if (o == 1) {
+    snap_to_start();
+  }
+}, false);
+
+//functions
+function main_nav_click( data ) {
+  //console.log('main_nav_click');
+  background.src = '/images/master-background.jpg';
+  background.style.display = 'block';
+
+  //turn off
+  content.classList.remove('on');
+  introText.style.opacity = 0;
+  topright.style.opacity = 0;
+
+  //empty
+  secondaryNav.innerHTML = '';
+  subtitle.innerHTML = '';
+  contentInner.innerHTML = '';
+
+  //subnav
+  data.subnav.forEach(element => {
+    //console.log(element);
+    const navitem = document.createElement('li');
+    navitem.innerHTML = element.title;
+
+    navitem.addEventListener('click', function () {
+      //console.log('navitem');
+      content.classList.remove('on');
+      subtitle.style.opacity = 0;
+      tertiaryTitle.innerHTML = element.title;
+      tertiaryTitle.classList.add('on');
+      contentInner.innerHTML = element.content;
+      tempbg = element.bg;
+
+      change_video( element.video );
+      video.addEventListener('loadeddata', tertiary_data_loaded, false);
+      video.addEventListener('ended', tertiary_end, false);
+    }, false);
+
+    secondaryNav.appendChild(navitem);
+  });
+
+  //title
+  subtitle.innerHTML = data.title;
+
+  //turn on
+  homeButton.style.opacity = 1;
+  tertiaryTitle.style.opacity = 1;
+  secondaryNav.style.opacity = 1;
+  subtitle.style.opacity = 1;
+}
+
+function tertiary_data_loaded() {
+  background.style.display = 'none';
+  background.src = tempbg;
+  video.play();
+  video.removeEventListener('loadeddata', tertiary_data_loaded, false);
+}
+
+function tertiary_end() {
+  //console.log('tertiary_end');
+
+  topright.style.opacity = 1;
+  background.style.display = 'block';
+  jQuery('#content').addClass('on');
+  video.pause(); 
+  video.removeEventListener('ended', tertiary_end, false);
+}
 
 function snap_to_start() {
+  //console.log('snap_to_start');
+
+  jQuery('#content').removeClass('on');
+  tertiaryTitle.classList.remove('on');
   mainnav.style.opacity = 1;
-  requestQuote.style.display = 'block';
+  homeButton.style.opacity = 0;
+  topright.style.display = 'block';
   background.src = data.start.out_bg;
   skipIntro.style.display = 'none';
   background.style.display = 'block';
@@ -50,8 +182,11 @@ function snap_to_start() {
 }
 
 function start() {
+  //console.log('start');
+
   mainnav.style.opacity = 1;
-  requestQuote.style.display = 'block';
+  //homeButton.style.opacity = 1;
+  topright.style.display = 'block';
   skipIntro.style.display = 'none';
   background.style.display = 'block';
   introText.style.display = 'block';
@@ -59,12 +194,15 @@ function start() {
 }
 
 function out_transition(e) {
+  //console.log('out_transition');
+
   background.src = e.currentTarget.newBg;
   background.style.display = 'block';
   video.removeEventListener('ended', start, false);
 }
 
 function change_video( newVid ) {
+  //console.log('change_video');
   let source = video.getElementsByTagName('source')[0];
 
   source.setAttribute('src', newVid);

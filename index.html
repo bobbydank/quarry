@@ -6,7 +6,7 @@
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;700&family=Roboto:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="/css/libs/fontawesome/css/all.min.css"/>
 
@@ -19,11 +19,21 @@
       <img id="logo" src="/images/logo.svg" alt="Martin">
 
       <h1 class="start">Quarry</h1>
+      <h2 id="subtitle"></h2>
       <div id="startbutton" class="start">
         <i class="fa-solid fa-arrow-right"></i>
       </div>
       <img id="skip" src="/images/skip-intro.svg" alt="skip intro">
-      <a id="requestquote" target="_blank" href="https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote"><img src="/images/request-quote.svg" alt="Request Quote"></a>
+      <div id="topright">
+        <h3 id="tertiary_title"></h3>
+        <a id="requestquote" target="_blank" href="https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote"><img src="/images/request-quote.svg" alt="Request Quote"></a>
+      </div>
+
+      <div id="content">
+        <div id="content_inner"></div>
+        <img src="/images/scrolldown.svg" id="scroll_up" alt="scroll up">
+        <img src="/images/scrolldown.svg" id="scroll_down" alt="scroll down">
+      </div>
 
       <p id="introText">At Martin, we help the mining industry move materials that are essential to their business. For over 70 years, we have worked with customers and suppliers to provide them with the machines, parts and replacement parts needed to run their operations.</p>
 
@@ -41,7 +51,7 @@
         </ul>
       </div>
       
-
+      <img src="/images/home-btn.svg" id="home_button" alt="home button">
       <div id="lines"></div>
       <img id="background" src="/images/home.jpg" alt="background">
       <video nocontrols preload="none" muted id="video">
@@ -51,5 +61,6 @@
   </main>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="/js/data.js"></script>
   <script src="/js/scripts.js"></script>
 </body>
