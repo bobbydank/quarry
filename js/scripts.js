@@ -36,29 +36,29 @@ scrollup.addEventListener('click', function () {
 }, false);
 
 //mainnav
-drumpulleys.addEventListener('click', function () {
-  main_nav_click( data.drumpulleys );
+drumpulleys.addEventListener('click', function (e) {
+  main_nav_click( data.drumpulleys, e );
 }, false);
-cleanflight.addEventListener('click', function () {
-  main_nav_click( data.cleanflight );
+cleanflight.addEventListener('click', function (e) {
+  main_nav_click( data.cleanflight, e );
 }, false);
-wingpulley.addEventListener('click', function () {
-  main_nav_click( data.wingpulley );
+wingpulley.addEventListener('click', function (e) {
+  main_nav_click( data.wingpulley, e );
 }, false);
-carryiders.addEventListener('click', function () {
-  main_nav_click( data.carryiders );
+carryiders.addEventListener('click', function (e) {
+  main_nav_click( data.carryiders, e );
 }, false);
-returnidlers.addEventListener('click', function () {
-  main_nav_click( data.returnidlers );
+returnidlers.addEventListener('click', function (e) {
+  main_nav_click( data.returnidlers, e );
 }, false);
-drives.addEventListener('click', function () {
-  main_nav_click( data.drives );
+drives.addEventListener('click', function (e) {
+  main_nav_click( data.drives, e );
 }, false);
-impactbed.addEventListener('click', function () {
-  main_nav_click( data.impactbed );
+impactbed.addEventListener('click', function (e) {
+  main_nav_click( data.impactbed, e );
 }, false);
-coupling.addEventListener('click', function () {
-  main_nav_click( data.coupling );
+coupling.addEventListener('click', function (e) {
+  main_nav_click( data.coupling, e );
 }, false);
 
 //other stuff
@@ -100,14 +100,17 @@ homeButton.addEventListener('click', function () {
 }, false);
 
 //functions
-function main_nav_click( data ) {
+function main_nav_click( data, event ) {
+  jQuery('#primary li.active').removeClass('active');
+  event.target.classList.add('active');
+
   //console.log('main_nav_click');
   background.src = '/images/master-background.jpg';
   background.style.display = 'block';
 
   //turn off
   content.classList.remove('on');
-  introText.style.opacity = 0;
+  introText.style.display = 'none';
   topright.style.opacity = 0;
 
   //empty
@@ -121,7 +124,13 @@ function main_nav_click( data ) {
     const navitem = document.createElement('li');
     navitem.innerHTML = element.title;
 
-    navitem.addEventListener('click', function () {
+    navitem.addEventListener('click', function (e) {
+      jQuery('#secondary li.active').removeClass('active');
+      e.target.classList.add('active');
+
+      background.src = '/images/master-background.jpg';
+      background.style.display = 'block';
+
       //console.log('navitem');
       content.classList.remove('on');
       subtitle.style.opacity = 0;
@@ -167,7 +176,8 @@ function tertiary_end() {
 
 function snap_to_start() {
   //console.log('snap_to_start');
-
+  jQuery('#primary li.active').removeClass('active');
+  secondaryNav.innerHTML = '';
   jQuery('#content').removeClass('on');
   tertiaryTitle.classList.remove('on');
   mainnav.style.opacity = 1;
