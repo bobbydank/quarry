@@ -4,10 +4,6 @@
 # VS Code
 .vscode/*
 
-# Project Specific
-text.html
-zips/*
-
 .ftpconfig
 tailwind.config.js
 
