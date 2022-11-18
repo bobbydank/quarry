@@ -68,6 +68,7 @@ skipIntro.addEventListener('click', snap_to_start, false);
 video.load();
 startbutton.addEventListener('click', function () {
   jQuery('.start').fadeOut(100);
+  jQuery('#primary li.active').removeClass('active');
   secondaryNav.innerHTML = '';
   background.style.display = 'none';
   skipIntro.style.display = 'block';
@@ -193,7 +194,8 @@ function snap_to_start() {
 
 function start() {
   //console.log('start');
-
+  jQuery('#primary li.active').removeClass('active');
+  secondaryNav.innerHTML = '';
   mainnav.style.opacity = 1;
   //homeButton.style.opacity = 1;
   topright.style.display = 'block';
