@@ -135,12 +135,51 @@ h3.on {
 }
 #topright {
   right:0;
-  display:none;
+  display:block;
   position: absolute;
   top:50px;
   transition: all 0.5s;
   z-index: 50;
   text-align: right;
+}
+#button-container {
+  opacity: 0;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#button-container.active {
+  opacity: 1;
+}
+.product-button {
+  width:15vw;
+  max-width:300px;
+  display: inline-flex;
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  justify-content: flex-start;
+  align-items: center;
+  padding:7px 0 7px 20px;
+  font-size:1.5vw;
+  text-decoration: none;
+  margin-bottom:10px;
+  text-transform: uppercase;
+  background-color: rgba(51,51,51,0.5);
+}
+#requestquote {
+  background-color: rgba(6,47,135,0.5);
+}
+.product-button img {
+  height:35px;
+  width: 45px;
+  object-fit: contain;
+  object-position: center;
+  padding-right:20px;
+}
+#buttons {
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 #introText {
   display:none;
@@ -156,14 +195,7 @@ h3.on {
   transform: translate(-50%, -50%);
   z-index: 50;
 }
-#requestquote {
-  width:15vw;
-  max-width:300px;
-  display: inline-block;
-}
-#requestquote img {
-  width:100%;
-}
+
 #mainnav {
   opacity: 0;
   position: absolute;
