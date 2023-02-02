@@ -12,8 +12,8 @@ body, html {
 }
 main {
   position:relative; 
-  min-height:100%;
-  height:auto;
+  padding-bottom: 56.25%;
+  height:0;
 }
 #page-wrap {
   border-bottom:solid 15px var(--primary-color);
