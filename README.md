@@ -34,7 +34,9 @@ You will also find a lot of text that starts like this:
 
 Everything from that line down is the JSON string. Line breaks are present for readability and ease of editing. Copy that long string of data to a text file* and make your edits.
 
-Once edits are made, you will need to minify the string. You can do this using this website: https://www.minifier.org/ Simply copy/paste your edited JSON into the text box and select js.
+Once edits are made, you will need to minify the string. You can do this using this website: https://www.minifier.org/ 
+
+Simply copy/paste your edited JSON into the text box and select js.
 
 ![How to minify.](https://i.imgur.com/CHTF3uo.png)
 
