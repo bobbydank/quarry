@@ -1,7 +1,8 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Martin Quarry</title>
   <meta name="robots" content="noindex,nofollow" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,8 +11,8 @@
 
   <link rel="stylesheet" type="text/css" href="/css/libs/fontawesome/css/all.min.css"/>
 
-  <link rel="stylesheet" type="text/css" href="/css/reset.css?v=1" />
-  <link rel="stylesheet" type="text/css" href="/css/style.css?v=1" />
+  <link rel="stylesheet" type="text/css" href="/css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="/css/style.css" />
 
   <link rel="preload" as="image" href="/images/drive-pulley1.jpg">
   <link rel="preload" as="image" href="/images/drive-pulley2.jpg">
@@ -42,7 +43,7 @@
     <div id="page-wrap">
       <img id="logo" src="/images/logo.svg" alt="Martin">
 
-      <h1 class="start">Quarry</h1>
+      <h1 class="start">Enter Quarry World</h1>
       <h2 id="subtitle"></h2>
       <div id="startbutton" class="start">
         <i class="fa-solid fa-arrow-right"></i>
@@ -50,7 +51,10 @@
       <img id="skip" src="/images/skip-intro.svg" alt="skip intro">
       <div id="topright">
         <h3 id="tertiary_title"></h3>
-        <a id="requestquote" target="_blank" href="https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote"><img src="/images/request-quote.svg" alt="Request Quote"></a>
+        <div id="button-container">
+          <div id="buttons">
+          </div>
+        </div>
       </div>
 
       <div id="content">
@@ -78,7 +82,7 @@
       <img src="/images/home-btn.svg" id="home_button" alt="home button">
       <div id="lines"></div>
       <img id="background" src="/images/home.jpg" alt="background">
-      <video nocontrols playsinline preload="none" muted id="video">
+      <video nocontrols preload="none" muted id="video">
         <source src="/videos/0_Intro_trimmed_sped_up_compressed.mp4" type="video/mp4">
       </video>
     </div>

@@ -1,4 +1,6 @@
 let tempbg = '';
+let tempTitle = '';
+let buttons = '';
 
 const data = JSON.parse(rawdata);
 const logo = document.getElementById('logo');
@@ -17,6 +19,7 @@ const content = document.getElementById('content');
 const scrolldown = document.getElementById('scroll_down');
 const scrollup = document.getElementById('scroll_up');
 const contentInner = document.getElementById('content_inner');
+const buttonContainer = document.getElementById('button-container');
 
 const drumpulleys = document.getElementById('drumpulleys');
 const cleanflight = document.getElementById('cleanflight');
@@ -113,6 +116,7 @@ function main_nav_click( data, event ) {
   content.classList.remove('on');
   introText.style.display = 'none';
   topright.style.opacity = 0;
+  buttonContainer.style.opacity = 0;
 
   //empty
   secondaryNav.innerHTML = '';
@@ -135,10 +139,12 @@ function main_nav_click( data, event ) {
       //console.log('navitem');
       content.classList.remove('on');
       subtitle.style.opacity = 0;
-      tertiaryTitle.innerHTML = element.title;
+      topright.style.opacity = 0;
+      tempTitle = element.title;
       tertiaryTitle.classList.add('on');
       contentInner.innerHTML = element.content;
       tempbg = element.bg;
+      buttons = element.buttons;
 
       change_video( element.video );
       video.addEventListener('loadeddata', tertiary_data_loaded, false);
@@ -159,6 +165,40 @@ function main_nav_click( data, event ) {
 }
 
 function tertiary_data_loaded() {
+  //buttons
+  //console.log(buttons);
+  document.getElementById('buttons').innerHTML = '';
+  buttons.forEach(element => {
+    if (element.title && element.url) {
+      let a = document.createElement('a');
+
+      let img = document.createElement('img');
+      img.alt = element.title;
+      if (element.image) {
+        img.src = element.image;
+      } else {
+        img.src = '/images/gears.svg';
+      }
+      a.appendChild(img);
+
+      let text = document.createTextNode(element.title);
+      a.appendChild(text);
+
+      a.title = element.title;
+      a.href = element.url;
+      
+      if (element.target) {
+        a.target = element.target;
+      } 
+      
+      if (element.class) {
+        a.classList.add(element.class);
+      }
+      
+      document.getElementById('buttons').append(a);
+    }
+  });
+
   background.style.display = 'none';
   background.src = tempbg;
   video.play();
@@ -169,6 +209,9 @@ function tertiary_end() {
   //console.log('tertiary_end');
 
   topright.style.opacity = 1;
+  buttonContainer.style.opacity = 1;
+  tertiaryTitle.innerHTML = tempTitle;
+  tempTitle = '';
   background.style.display = 'block';
   jQuery('#content').addClass('on');
   video.pause(); 
@@ -183,6 +226,7 @@ function snap_to_start() {
   tertiaryTitle.classList.remove('on');
   mainnav.style.opacity = 1;
   homeButton.style.opacity = 0;
+  topright.style.opacity = 0;
   topright.style.display = 'block';
   background.src = data.start.out_bg;
   skipIntro.style.display = 'none';
