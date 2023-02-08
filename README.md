@@ -36,7 +36,7 @@ Everything from that line down is the JSON string. Line breaks are present for r
 
 Once edits are made, you will need to minify the string. You can do this using this website: https://www.minifier.org/ Simply copy/paste your edited JSON into the text box and select js.
 
-[How to minify.](https://i.imgur.com/CHTF3uo.png)
+![How to minify.](https://i.imgur.com/CHTF3uo.png)
 
 Once that is done, you can remove everything from the data.js file. Readd the following code:
 
