@@ -58,11 +58,11 @@ If there are no errors in your JSON, the site will load and your edits were succ
 
 If you look at the /js/data.txt, you will see how the buttons for the very first product (Profiled End Disc Drum (Drive Pulley)):
 
-![Button json.](https://imgur.com/jySryty)
+![Button json.](https://i.imgur.com/jySryty.png)
 
 This is how they render in the website:
 
-![Rendered buttons.](https://imgur.com/Db3mA9r)
+![Rendered buttons.](https://i.imgur.com/Db3mA9r.png)
 
 Here are the parameters and what each does:
 
