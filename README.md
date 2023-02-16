@@ -54,6 +54,30 @@ If there are no errors in your JSON, the site will load and your edits were succ
 
 ---
 
+## Notes on buttons
+
+If you look at the /js/data.txt, you will see how the buttons for the very first product (Profiled End Disc Drum (Drive Pulley)):
+
+![Button json.](https://imgur.com/jySryty)
+
+This is how they render in the website:
+
+![Rendered buttons.](https://imgur.com/Db3mA9r)
+
+Here are the parameters and what each does:
+
+image (optional) - This is the image icon for the button. If one is not given, a gear icon will be used.
+
+title (required) - The text for the link.
+
+url (required) - The url target for the button. If you are using modal video, provide the direct link to the mp4 video, or use the Youtube/Vimeo embed links.
+
+target (optional) - This is how the link reacts. If there not present, the supplied url will be opened in the same window as the quarry world. If "_blank", the link will open in a new tab/window. If modal, the url will open in an iframe in quarry world.
+
+class (optional) - Tf you need to add a class to the button. The "requostquote" class is needed to make the button blue.
+
+---
+
 ## Citations and Notes
 
 *Not Microsoft Word or any other word processor.

@@ -188,7 +188,42 @@ function tertiary_data_loaded() {
       a.href = element.url;
       
       if (element.target) {
-        a.target = element.target;
+        if (element.target == 'modal') {
+          a.addEventListener('click', function (e) {
+            e.preventDefault();
+            console.log(this.href);
+
+            let container = document.createElement('div');
+            container.classList.add('modal');
+            container.setAttribute('id', 'modal');
+
+            let cup = document.createElement('div');
+            container.classList.add('container');
+
+            let video = document.createElement('div');
+            video.classList.add('video');
+            let iframe = document.createElement('iframe');
+            iframe.src = this.href;
+            video.appendChild(iframe);
+
+            let close = document.createElement('img');
+            close.classList.add('close');
+            close.src = 'images/close-x.svg';
+
+            close.addEventListener('click', function () {
+              document.getElementById('modal').remove();
+            });
+
+            cup.appendChild(close);
+            cup.appendChild(video);
+
+            container.appendChild(cup);
+
+            document.getElementById('page-wrap').parentNode.appendChild(container);
+          });
+        } else {
+          a.target = element.target;
+        }
       } 
       
       if (element.class) {
