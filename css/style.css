@@ -389,3 +389,30 @@ h3.on {
 	width: 100%;
 	height: 100%;
 }
+
+@media (max-width:900px) {
+  #startbutton i {
+    font-size:20px;
+  }
+  h1 {
+    font-size:35px;
+  }
+  h2 {
+    font-size:25px;
+  }
+  h3 {
+    font-size:22px;
+  }
+  #buttons > * {
+    font-size:20px;
+  }
+  #introText {
+    font-size:20px;
+  }
+  #mainnav #primary li {
+    font-size:18px;
+  }
+  #content p {
+    font-size:18px;
+  }
+}
