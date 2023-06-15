@@ -301,3 +301,38 @@ function change_video( newVid ) {
 
   video.load();
 }
+
+var partvideo = document.getElementById('partvideo');
+var playPauseBtn = document.getElementById('playPauseBtn');
+var progressBar = document.getElementById('progressBar');
+
+// Event listener for the play/pause button
+playPauseBtn.addEventListener('click', function() {
+  if (partvideo.paused) {
+    partvideo.play();
+    playPauseBtn.textContent = 'Pause';
+  } else {
+    partvideo.pause();
+    playPauseBtn.textContent = 'Play';
+  }
+});
+
+// Event listener for the progress bar
+progressBar.addEventListener('input', function() {
+  partvideo.currentTime = progressBar.value;
+});
+
+// Update the progress bar as the video plays
+partvideo.addEventListener('timeupdate', function() {
+  // Update the slider value
+  if (!isNaN(partvideo.duration)) {
+    var progress = partvideo.currentTime / partvideo.duration * 100;
+    progressBar.value = partvideo.currentTime;
+    progressBar.max = partvideo.duration;
+  }
+});
+
+// Load video duration on metadata load
+video.onloadedmetadata = function() {
+  progressBar.max = partvideo.duration;
+};
