@@ -1,6 +1,7 @@
 let tempbg = '';
 let tempTitle = '';
 let buttons = '';
+let partviewer = '';
 
 const data = JSON.parse(rawdata);
 const logo = document.getElementById('logo');
@@ -29,6 +30,7 @@ const returnidlers = document.getElementById('returnidlers');
 const drives = document.getElementById('drives');
 const impactbed = document.getElementById('impactbed');
 const coupling = document.getElementById('coupling');
+const partviewerContainer = document.getElementById('part-viewer');
 
 //scroll
 scrolldown.addEventListener('click', function () {
@@ -63,6 +65,11 @@ impactbed.addEventListener('click', function (e) {
 coupling.addEventListener('click', function (e) {
   main_nav_click( data.coupling, e );
 }, false);
+
+//handles closing partviwer
+document.getElementById('pv-close').addEventListener('click', function (e) {
+  partviewerContainer.classList.remove('active');
+});
 
 //other stuff
 skipIntro.addEventListener('click', snap_to_start, false);
@@ -151,6 +158,12 @@ function main_nav_click( data, event ) {
       video.addEventListener('ended', tertiary_end, false);
     }, false);
 
+    if (element.hasOwnProperty('partviewer')) {
+      partviewer = element.partviewer;  
+    } else {
+      partviewer = '';
+    }
+
     secondaryNav.appendChild(navitem);
   });
 
@@ -234,12 +247,49 @@ function tertiary_data_loaded() {
     }
   });
 
+  //partviewer 
+  if (partviewer) {
+    //create button
+    let a = document.createElement('a');
+    a.herf = "#";
+
+    let img = document.createElement('img');
+    img.alt = partviewer.title;
+    if (partviewer.image) {
+      img.src = partviewer.image;
+    } else {
+      img.src = '/images/gears.svg';
+    }
+    a.appendChild(img);
+
+    let text = document.createTextNode('Part Viewer');
+    a.appendChild(text);
+
+    a.addEventListener('click', function (e) {
+      document.getElementById('part-viewer').classList.add('active');
+    });
+
+    document.getElementById('buttons').append(a);
+
+    //partviewer content
+    //title
+    let title = document.createElement('span');
+    title.innerHTML = partviewer.title;
+    document.getElementById('pv-title').appendChild(title);
+
+    ///  ------ Start here
+    
+  } 
+
   background.style.display = 'none';
   background.src = tempbg;
   video.play();
   video.removeEventListener('loadeddata', tertiary_data_loaded, false);
 }
 
+/**
+ * 
+ */
 function tertiary_end() {
   //console.log('tertiary_end');
 
@@ -253,6 +303,9 @@ function tertiary_end() {
   video.removeEventListener('ended', tertiary_end, false);
 }
 
+/**
+ * this is the skip intro stuff. also called when the home button is called.
+ */
 function snap_to_start() {
   //console.log('snap_to_start');
   jQuery('#primary li.active').removeClass('active');
@@ -271,6 +324,9 @@ function snap_to_start() {
   video.removeEventListener('ended', start, false);
 }
 
+/**
+ * The start of everything 
+ */
 function start() {
   //console.log('start');
   jQuery('#primary li.active').removeClass('active');
@@ -284,6 +340,9 @@ function start() {
   video.removeEventListener('ended', start, false);
 }
 
+/**
+ * 
+ */
 function out_transition(e) {
   //console.log('out_transition');
 
@@ -292,6 +351,9 @@ function out_transition(e) {
   video.removeEventListener('ended', start, false);
 }
 
+/**
+ * Swaps out the src of the background video and loads it
+ */
 function change_video( newVid ) {
   //console.log('change_video');
   let source = video.getElementsByTagName('source')[0];
@@ -301,38 +363,3 @@ function change_video( newVid ) {
 
   video.load();
 }
-
-var partvideo = document.getElementById('partvideo');
-var playPauseBtn = document.getElementById('playPauseBtn');
-var progressBar = document.getElementById('progressBar');
-
-// Event listener for the play/pause button
-playPauseBtn.addEventListener('click', function() {
-  if (partvideo.paused) {
-    partvideo.play();
-    playPauseBtn.textContent = 'Pause';
-  } else {
-    partvideo.pause();
-    playPauseBtn.textContent = 'Play';
-  }
-});
-
-// Event listener for the progress bar
-progressBar.addEventListener('input', function() {
-  partvideo.currentTime = progressBar.value;
-});
-
-// Update the progress bar as the video plays
-partvideo.addEventListener('timeupdate', function() {
-  // Update the slider value
-  if (!isNaN(partvideo.duration)) {
-    var progress = partvideo.currentTime / partvideo.duration * 100;
-    progressBar.value = partvideo.currentTime;
-    progressBar.max = partvideo.duration;
-  }
-});
-
-// Load video duration on metadata load
-video.onloadedmetadata = function() {
-  progressBar.max = partvideo.duration;
-};

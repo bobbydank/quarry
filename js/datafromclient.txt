@@ -402,13 +402,41 @@
               "url": "https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote",
               "target": "_blank",
               "class": "requestquote"
-            },
-            {
-                "title": "Simple Link",
-                "url": "#",
-                "image": "images/video-btn.svg"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Blue-Flex<sup>&reg;</sup> Coupling",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - T20",
+                "content": "blue_flex_gird_coupling_t_20.mp4",
+                "icon": "images/video-btn.svg"
+              },
+              {
+                "type": "video",
+                "title": "Part Viewer - T10",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "icon": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "icon": "images/exploded.svg",
+                "content": "blue-flex-coupling.png"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "icon": "images/info.svg",
+                "content": [
+                  "<p><strong>Martin Blue-Flex® grid couplings are the best option where both high torque levels and dampening requirements exist.</strong> Unlike other metallic couplings, Martin Blue-Flex® grid couplings have the ability to reduce vibration and cushion shock loads to driven and driving power transmitting equipment components.</p><p>Progressive contact between the curved profile of the hub teeth and the flexible grid makes it possible to absorb impact energy by spreading it out, reducing the magnitude of the peak loads.</p><p>Martin Blue-Flex® grid couplings follow the same Martin product/ service standards that make Martin the one industries rely on for quality, availability, service and response time that is second to none.</p>",
+                  "<p><strong>Martin Blue-Flex® grid couplings are torsionally flexible and resilient - vibration reduction up to 30%, plus cushion shock loads safeguard driving and driven equipment.</strong></p><ul><li>Quick installation and easy maintenance reduces labor and downtime costs</li><li>Fully interchangeable with industry standards</li><li>Versatile stock; metric size cover fasteners available</li><li>High tensile alloy steel grids and precision machined hubs ensure superior performance and long life.</li></ul>"
+                ]
+              }
+            ]
+          }
         }
       ]
     }
