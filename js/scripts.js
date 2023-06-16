@@ -69,6 +69,7 @@ coupling.addEventListener('click', function (e) {
 //handles closing partviwer
 document.getElementById('pv-close').addEventListener('click', function (e) {
   partviewerContainer.classList.remove('active');
+  tertiaryTitle.style.opacity = "1";
 });
 
 //other stuff
@@ -267,6 +268,7 @@ function tertiary_data_loaded() {
 
     a.addEventListener('click', function (e) {
       document.getElementById('part-viewer').classList.add('active');
+      tertiaryTitle.style.opacity = "0";
     });
 
     document.getElementById('buttons').append(a);
