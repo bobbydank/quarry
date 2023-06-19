@@ -9,3 +9,5 @@ tailwind.config.js
 
 php/*
 index.php
+
+js/partviewer-test.js

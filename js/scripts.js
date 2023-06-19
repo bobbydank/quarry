@@ -184,22 +184,7 @@ function tertiary_data_loaded() {
   document.getElementById('buttons').innerHTML = '';
   buttons.forEach(element => {
     if (element.title && element.url) {
-      let a = document.createElement('a');
-
-      let img = document.createElement('img');
-      img.alt = element.title;
-      if (element.image) {
-        img.src = element.image;
-      } else {
-        img.src = '/images/gears.svg';
-      }
-      a.appendChild(img);
-
-      let text = document.createTextNode(element.title);
-      a.appendChild(text);
-
-      a.title = element.title;
-      a.href = element.url;
+      let a = createButton(element);
       
       if (element.target) {
         if (element.target == 'modal') {
@@ -250,6 +235,8 @@ function tertiary_data_loaded() {
 
   //partviewer 
   if (partviewer) {
+    let first = true;
+
     //create button
     let a = document.createElement('a');
     a.herf = "#";
@@ -279,8 +266,161 @@ function tertiary_data_loaded() {
     title.innerHTML = partviewer.title;
     document.getElementById('pv-title').appendChild(title);
 
-    ///  ------ Start here
-    
+    ///  ------ Start adding content
+    partviewer.content.forEach(element => {
+      //console.log(element);
+      let num = Math.floor(Math.random() * (15 - 10 + 1)) + 10;
+      let uniqueId = generateRandomString(num);
+
+      //create button
+      let a = createButton(element);
+      a.setAttribute('data-id', uniqueId);
+
+      if (first) {
+        a.classList.add('active');
+      }
+
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Get current active elements
+        let activeButton = document.querySelector('#pv-buttons a.active');
+        let activeContent = document.querySelector('#pv-content > div.active');
+  
+        // Get new active elements
+        let newButton = a;
+        let newContentId = a.getAttribute('data-id');
+        let newContent = document.querySelector(`#pv-content > div[id='${newContentId}']`);
+  
+        // Change active button and content
+        changeActive(activeButton, newButton);
+        changeActive(activeContent, newContent);
+      });
+
+      document.getElementById('pv-buttons').appendChild(a);
+
+      //handle content
+      let container = document.createElement('div');
+      container.id = uniqueId
+      container.classList.add(element.type);
+
+      if (first) {
+        container.classList.add('active');
+        first = false;
+      }
+
+      if (element.type === 'video') {
+        let videoContainer = document.createElement('div');
+        videoContainer.classList.add('video-container');
+
+        // Create video element and its source
+        var video = document.createElement('video');
+        video.setAttribute('id', 'partvideo');
+        video.setAttribute('preload', 'metadata');
+        video.setAttribute('data-id', uniqueId);
+
+        var source = document.createElement('source');
+        source.setAttribute('src', '/partviewer/videos/'+element.content);
+        source.setAttribute('type', 'video/mp4');
+        video.appendChild(source);
+
+        // Create play/pause button with FontAwesome icon
+        var button = document.createElement('button');
+        button.setAttribute('id', 'playPauseBtn');
+        button.classList.add('videoPlay');
+        button.setAttribute('data-id', uniqueId);
+        
+        var icon = document.createElement('i');
+        icon.setAttribute('class', 'fas fa-play');
+        icon.setAttribute('data-id', uniqueId);
+        button.appendChild(icon);
+
+        // Create progress bar wrapper
+        var sliderWrapper = document.createElement('div');
+        sliderWrapper.setAttribute('id', 'sliderWrapper');
+
+        // Create progress bar
+        var progressBar = document.createElement('input');
+        progressBar.setAttribute('type', 'range');
+        progressBar.setAttribute('id', 'progressBar');
+        progressBar.setAttribute('value', '0');
+        progressBar.setAttribute('step', 'any');
+        progressBar.setAttribute('min', '0');
+        progressBar.setAttribute('data-id', uniqueId);
+        sliderWrapper.appendChild(progressBar);
+
+        //event listeners
+        button.addEventListener('click', function(event) {
+          var id2 = event.target.dataset.id;
+          var topContainer = document.getElementById(id2);
+          let icon2 = topContainer.querySelector('i');
+          let video2 = topContainer.querySelector('video');
+
+          if (video2.paused) {
+            video2.play();
+            icon2.className = 'fas fa-pause';
+          } else {
+            video2.pause();
+            icon2.className = 'fas fa-play';
+          }
+        }); 
+        progressBar.addEventListener('input', function(event) {
+          let id = event.target.dataset.id;
+          let topContainer = document.getElementById(id);
+          let progressBar = topContainer.querySelector('input');
+          let video = topContainer.querySelector('video');
+
+          video.currentTime = progressBar.value;
+        });
+        video.onloadedmetadata = function(event) {
+          let id = event.target.dataset.id;
+          let topContainer = document.getElementById(id);
+          let progressBar = topContainer.querySelector('input');
+          let video = topContainer.querySelector('video');
+
+          progressBar.max = video.duration;
+        };   
+        video.addEventListener('timeupdate', function(event) {
+          let id = event.target.dataset.id;
+          let topContainer = document.getElementById(id);
+          let progressBar = topContainer.querySelector('input');
+          let video = topContainer.querySelector('video');
+
+          // Update the slider value
+          if (!isNaN(video.duration)) {
+            progressBar.value = video.currentTime;
+            progressBar.max = video.duration;
+          }
+        });     
+
+        // Append everything to the container
+        videoContainer.appendChild(video);
+        videoContainer.appendChild(button);
+        videoContainer.appendChild(sliderWrapper);
+
+        video.load();
+
+        container.appendChild(videoContainer);
+      } else if (element.type === 'image') {
+        let image = document.createElement('img');
+        image.src = '/partviewer/images/'+element.content;
+
+        container.appendChild(image);
+      } else if (element.type === 'content') {
+        let contentContainer = document.createElement('div');
+        contentContainer.classList.add('info-container');
+
+        element.content.forEach(content => {
+          let div = document.createElement('div');
+          div.innerHTML = content;
+          contentContainer.appendChild(div);
+        });
+
+        container.appendChild(contentContainer);
+      }
+
+      document.getElementById('pv-content').appendChild(container);
+    });
   } 
 
   background.style.display = 'none';
@@ -293,7 +433,7 @@ function tertiary_data_loaded() {
  * 
  */
 function tertiary_end() {
-  //console.log('tertiary_end');
+  console.log('tertiary_end');
 
   topright.style.opacity = 1;
   buttonContainer.style.opacity = 1;
@@ -309,7 +449,8 @@ function tertiary_end() {
  * this is the skip intro stuff. also called when the home button is called.
  */
 function snap_to_start() {
-  //console.log('snap_to_start');
+  console.log('snap_to_start');
+  
   jQuery('#primary li.active').removeClass('active');
   secondaryNav.innerHTML = '';
   jQuery('#content').removeClass('on');
@@ -330,7 +471,8 @@ function snap_to_start() {
  * The start of everything 
  */
 function start() {
-  //console.log('start');
+  console.log('start');
+  
   jQuery('#primary li.active').removeClass('active');
   secondaryNav.innerHTML = '';
   mainnav.style.opacity = 1;
@@ -346,7 +488,7 @@ function start() {
  * 
  */
 function out_transition(e) {
-  //console.log('out_transition');
+  console.log('out_transition');
 
   background.src = e.currentTarget.newBg;
   background.style.display = 'block';
@@ -357,11 +499,84 @@ function out_transition(e) {
  * Swaps out the src of the background video and loads it
  */
 function change_video( newVid ) {
-  //console.log('change_video');
+  console.log('change_video');
+
+  //empty partviewer
+  empty_partviewer();
+  
   let source = video.getElementsByTagName('source')[0];
 
   source.setAttribute('src', newVid);
   source.setAttribute('type', 'video/mp4');
 
   video.load();
+}
+
+/**
+ * Removes all of the content in the partviewer
+ */
+function empty_partviewer() {
+  console.log('empty_partviewer');
+
+  document.getElementById('pv-title').innerHTML = "";
+  document.getElementById('pv-buttons').innerHTML = "";
+  document.getElementById('pv-content').innerHTML = "";
+}
+
+/**
+ * Assists in creating unique IDs for the part viewer
+ * 
+ * @param {*} length 
+ * @returns random string of characters
+ */
+function generateRandomString(length) {
+  let result = '';
+  let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
+
+/**
+ * helps create the buttons for the sidebar and the partviewer
+ * 
+ * @param {*} element 
+ * @returns 
+ */
+function createButton(element) {
+  let a = document.createElement('a');
+
+  let img = document.createElement('img');
+  img.alt = element.title;
+  if (element.image) {
+    img.src = element.image;
+  } else {
+    img.src = '/images/gears.svg';
+  }
+  a.appendChild(img);
+
+  let text = document.createTextNode(element.title);
+  a.appendChild(text);
+
+  a.title = element.title;
+
+  if (element.url) {
+    a.href = element.url;
+  } else {
+    a.href = '#';
+  }
+
+  return a;
+}
+
+/**
+ * swaps the active class on the elements passed.
+ * 
+ * @param {*} oldElement 
+ * @param {*} newElement 
+ */
+function changeActive(oldElement, newElement) {
+  oldElement.classList.remove('active');
+  newElement.classList.add('active');
 }
