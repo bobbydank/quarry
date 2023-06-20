@@ -127,7 +127,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Impact Troughing Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "steel_troughing_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Adjustable Idlers",
@@ -143,7 +155,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Adjustable Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "adjustable_troughing_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Retractable Idlers",
@@ -159,7 +183,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Retractable Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "retractable_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Removable Wing Bracket Idlers",
@@ -175,7 +211,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Part Viewer",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "removeable_wing_bracket_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Impact Troughing Idlers",
@@ -191,7 +239,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Impact Troughing Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "impact_troughing_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Self-Aligning Troughing Idlers",
@@ -228,7 +288,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Live Shaft Rolls",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "live_shaft_rolls.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Steel Return Idlers",
@@ -244,7 +316,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Steel Return Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "steel_return_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Rubber Disc Return Idlers",
@@ -260,7 +344,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Rubber Disc Return Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "rubber_disc_return_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Steel Return Self-aligning Idlers",
@@ -276,7 +372,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Steel Return Self-aligning Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "steel_return_self_aligning_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Rubber Disc Return Self-aligning Idlers",
@@ -292,7 +400,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Rubber Disc Return Self-aligning Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "rubber_disc_return_self_aligning_idlers.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         }
       ]
     },
@@ -361,7 +481,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "V-belt Sheaves",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "sheave_drive.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         }
       ]
     },
@@ -382,7 +514,19 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Impact Bed",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "impact_bed.mp4",
+                "image": "images/video-btn.svg"
+              }
+            ]
+          }
         }
       ]
     },
