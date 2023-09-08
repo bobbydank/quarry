@@ -32,7 +32,33 @@
               "target": "modal",
               "image": "images/video-btn.svg"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Profiled End Disc Drum (Drive Pulley)",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "profiled_end_disc_drum_drive_pulley.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         },
         {
           "title": "Profiled End Disc Pulley (Non Drive)",
@@ -48,7 +74,33 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Profiled End Disc Pulley (Non Drive)",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "profiled_end_disc_pulley.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         }
       ]
     },
@@ -69,7 +121,33 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Tail Pulley Position with Manual Take-up Frame",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "tail_pulley_position_with_manual_take_up_frame.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         },
         {
           "title": "Take-up Pulley position",
@@ -85,15 +163,41 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Take-up Pulley position",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "take_up_pulley_position.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         }
       ]
     },
     "wingpulley": {
-      "title": "Wing Pulley",
+      "title": "Traditional Wing Pulley",
       "subnav": [
         {
-          "title": "Wing Pulley",
+          "title": "Wing Pulley Tail Pulley Position",
           "id": "",
           "content": "<p><strong>Martin manufactures traditional wing pulleys using a pipe end design. Building a wing pulley with a pipe core in each end is an extremely strong way to build a wing pulley.</strong> The most common failure with a traditional wing pulley is wing fold over. Competitors utilize reinforcing rings around each end at a certain diameter to tie all wings together and reduce the chance of wing folding. These reinforcing rings create additional maintenance challenges as these rings become an area to catch large rocks and potentially damage the conveyor belt. Martin uses a maximum 6” wing height with all wings and does not use reinforcing rings on any wing pulleys.</p>",
           "video": "videos/22_Product_22_Wing Pulley_Trimmed.mp4",
@@ -106,7 +210,33 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Wing Pulley Tail Pulley Position",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "wing_pulley.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         }
       ]
     },
@@ -137,6 +267,20 @@
                 "title": "Part Viewer",
                 "content": "steel_troughing_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "steel_idlers.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -165,6 +309,20 @@
                 "title": "Part Viewer",
                 "content": "adjustable_troughing_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "adjustable_transition_idler.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -193,6 +351,20 @@
                 "title": "Part Viewer",
                 "content": "retractable_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "retractable_idlers.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -221,6 +393,20 @@
                 "title": "Part Viewer",
                 "content": "removeable_wing_bracket_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "removable_wing_bracket_idlers.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -249,6 +435,20 @@
                 "title": "Part Viewer",
                 "content": "impact_troughing_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "impact_idlers.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -298,6 +498,20 @@
                 "title": "Part Viewer",
                 "content": "live_shaft_rolls.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "live_shaft_roll.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -326,6 +540,20 @@
                 "title": "Part Viewer",
                 "content": "steel_return_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "steel_returns.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -354,6 +582,20 @@
                 "title": "Part Viewer",
                 "content": "rubber_disc_return_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "rubber_disc_returns.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -382,6 +624,20 @@
                 "title": "Part Viewer",
                 "content": "steel_return_self_aligning_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "steel_return_self_aligner.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -410,6 +666,20 @@
                 "title": "Part Viewer",
                 "content": "rubber_disc_return_self_aligning_idlers.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "rubber_disc_return_self_aligners.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -524,6 +794,20 @@
                 "title": "Part Viewer",
                 "content": "impact_bed.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "impact_beds.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }

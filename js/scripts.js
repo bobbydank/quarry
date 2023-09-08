@@ -155,15 +155,15 @@ function main_nav_click( data, event ) {
       buttons = element.buttons;
 
       change_video( element.video );
-      video.addEventListener('loadeddata', tertiary_data_loaded, false);
+      video.addEventListener('loadeddata', tertiary_data_loaded(element), false);
       video.addEventListener('ended', tertiary_end, false);
     }, false);
 
-    if (element.hasOwnProperty('partviewer')) {
+    /* if (element.hasOwnProperty('partviewer')) {
       partviewer = element.partviewer;  
     } else {
       partviewer = '';
-    }
+    }*/
 
     secondaryNav.appendChild(navitem);
   });
@@ -178,7 +178,7 @@ function main_nav_click( data, event ) {
   subtitle.style.opacity = 1;
 }
 
-function tertiary_data_loaded() {
+function tertiary_data_loaded( element=null) {
   //buttons
   //console.log(buttons);
   document.getElementById('buttons').innerHTML = '';
@@ -233,7 +233,14 @@ function tertiary_data_loaded() {
     }
   });
 
-  //partviewer 
+  //partviewer
+  
+  if (element.hasOwnProperty('partviewer')) {
+    partviewer = element.partviewer;  
+  } else {
+    partviewer = '';
+  }
+
   if (partviewer) {
     let first = true;
 
