@@ -467,7 +467,33 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Self-Aligning Troughing Idlers",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer - No Video",
+                "content": "impact_troughing_idlers.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "self_aligners.jpg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         }
       ]
     },
