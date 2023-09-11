@@ -39,8 +39,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "title": "Part Viewer",
+                "content": "profiled_end_disc_drum.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -81,8 +81,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "title": "Part Viewer",
+                "content": "profiled_end_disc_drum_non_drive.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -128,8 +128,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "title": "Part Viewer",
+                "content": "tail_pulley_position_manual_take_up_from.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -170,8 +170,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "title": "Part Viewer",
+                "content": "take_up_pulley_position.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -217,8 +217,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "blue_flex_gird_coupling_t_10.mp4",
+                "title": "Part Viewer",
+                "content": "wing_pulley.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -474,8 +474,8 @@
             "content": [
               {
                 "type": "video",
-                "title": "Part Viewer - No Video",
-                "content": "impact_troughing_idlers.mp4",
+                "title": "Part Viewer",
+                "content": "self_aligning_troughing_idlers.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -522,7 +522,7 @@
               {
                 "type": "video",
                 "title": "Part Viewer",
-                "content": "live_shaft_rolls.mp4",
+                "content": "live_shaft_rolls_new.mp4",
                 "image": "images/video-btn.svg"
               },
               {
@@ -729,7 +729,27 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Roller Chain Sprocket",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "roller_chain_sprocket_drive.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         },
         {
           "title": "Synchronous Sprocket",
@@ -761,7 +781,27 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Engineering Class Sprocket",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "engineered_class_sprocket_drive.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         },
         {
           "title": "V-belt Sheaves",
