@@ -47,7 +47,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "profiled_end_disc_drum_drive_pulley.jpg"
+                "content": "profiled_end_disc_drum_drive_pulley.svg"
               },
               {
                 "type": "content",
@@ -89,7 +89,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "profiled_end_disc_pulley.jpg"
+                "content": "profiled_end_disc_pulley.svg"
               },
               {
                 "type": "content",
@@ -136,7 +136,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "tail_pulley_position_with_manual_take_up_frame.jpg"
+                "content": "tail_pulley_position_with_manual_take_up_frame.svg"
               },
               {
                 "type": "content",
@@ -178,7 +178,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "take_up_pulley_position.jpg"
+                "content": "take_up_pulley_position.svg"
               },
               {
                 "type": "content",
@@ -225,7 +225,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "wing_pulley.jpg"
+                "content": "wing_pulley.svg"
               },
               {
                 "type": "content",
@@ -272,7 +272,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_idlers.jpg"
+                "content": "steel_idlers.svg"
               },
               {
                 "type": "content",
@@ -314,7 +314,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "adjustable_transition_idler.jpg"
+                "content": "adjustable_transition_idler.svg"
               },
               {
                 "type": "content",
@@ -356,7 +356,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "retractable_idlers.jpg"
+                "content": "retractable_idlers.svg"
               },
               {
                 "type": "content",
@@ -398,7 +398,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "removable_wing_bracket_idlers.jpg"
+                "content": "removable_wing_bracket_idlers.svg"
               },
               {
                 "type": "content",
@@ -440,7 +440,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "impact_idlers.jpg"
+                "content": "impact_idlers.svg"
               },
               {
                 "type": "content",
@@ -482,7 +482,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "self_aligners.jpg"
+                "content": "self_aligners.svg"
               },
               {
                 "type": "content",
@@ -529,7 +529,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "live_shaft_roll.jpg"
+                "content": "live_shaft_roll.svg"
               },
               {
                 "type": "content",
@@ -571,7 +571,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_returns.jpg"
+                "content": "steel_returns.svg"
               },
               {
                 "type": "content",
@@ -613,7 +613,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "rubber_disc_returns.jpg"
+                "content": "rubber_disc_returns.svg"
               },
               {
                 "type": "content",
@@ -655,7 +655,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_return_self_aligner.jpg"
+                "content": "steel_return_self_aligner.svg"
               },
               {
                 "type": "content",
@@ -697,7 +697,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "rubber_disc_return_self_aligners.jpg"
+                "content": "rubber_disc_return_self_aligners.svg"
               },
               {
                 "type": "content",
@@ -741,6 +741,12 @@
                 "image": "images/video-btn.svg"
               },
               {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "roller_chain_sprocket.svg"
+              },
+              {
                 "type": "content",
                 "title": "Information",
                 "image": "images/info.svg",
@@ -765,7 +771,33 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Synchronous Sprocket",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "synchronous _sprocket_drive.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "synchronous_sprocket_drive.svg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
+              }
+            ]
+          }
         },
         {
           "title": "Engineering Class Sprocket",
@@ -791,6 +823,12 @@
                 "title": "Part Viewer",
                 "content": "engineered_class_sprocket_drive.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "engineering_class_sprocket_drive.svg"
               },
               {
                 "type": "content",
@@ -825,8 +863,22 @@
               {
                 "type": "video",
                 "title": "Part Viewer",
-                "content": "sheave_drive.mp4",
+                "content": "sheave_drive_interactive.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "sheave_drive_interactive.svg"
+              },
+              {
+                "type": "content",
+                "title": "Information",
+                "image": "images/info.svg",
+                "content": [
+                  "<p>Information Here</p>"
+                ]
               }
             ]
           }
@@ -865,7 +917,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "impact_beds.jpg"
+                "content": "impact_beds.svg"
               },
               {
                 "type": "content",
