@@ -47,15 +47,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "profiled_end_disc_drum_drive_pulley.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "profiled_end_disc_drum_drive_pulley.svg"
               }
             ]
           }
@@ -89,15 +81,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "profiled_end_disc_pulley.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "profiled_end_disc_pulley.svg"
               }
             ]
           }
@@ -136,15 +120,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "tail_pulley_position_with_manual_take_up_frame.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "tail_pulley_position_with_manual_take_up_frame.svg"
               }
             ]
           }
@@ -178,15 +154,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "take_up_pulley_position.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "take_up_pulley_position.svg"
               }
             ]
           }
@@ -225,15 +193,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "wing_pulley.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "wing_pulley.svg"
               }
             ]
           }
@@ -272,15 +232,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_idlers.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "steel_idlers.svg"
               }
             ]
           }
@@ -314,15 +266,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "adjustable_transition_idler.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "adjustable_transition_idler.svg"
               }
             ]
           }
@@ -356,15 +300,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "retractable_idlers.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "retractable_idlers.svg"
               }
             ]
           }
@@ -398,15 +334,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "removable_wing_bracket_idlers.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "removable_wing_bracket_idlers.svg"
               }
             ]
           }
@@ -440,15 +368,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "impact_idlers.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "impact_idlers.svg"
               }
             ]
           }
@@ -482,15 +402,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "self_aligners.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "self_aligners.svg"
               }
             ]
           }
@@ -529,15 +441,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "live_shaft_roll.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "live_shaft_roll.svg"
               }
             ]
           }
@@ -571,15 +475,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_returns.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "steel_returns.svg"
               }
             ]
           }
@@ -613,15 +509,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "rubber_disc_returns.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "rubber_disc_returns.svg"
               }
             ]
           }
@@ -655,15 +543,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "steel_return_self_aligner.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "steel_return_self_aligner.svg"
               }
             ]
           }
@@ -697,15 +577,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "rubber_disc_return_self_aligners.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "rubber_disc_return_self_aligners.svg"
               }
             ]
           }
@@ -741,12 +613,10 @@
                 "image": "images/video-btn.svg"
               },
               {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "roller_chain_sprocket.svg"
               }
             ]
           }
@@ -765,7 +635,25 @@
               "target": "_blank",
               "class": "requestquote"
             }
-          ]
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "Synchronous Sprocket",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "synchronous _sprocket_drive.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "synchronous_sprocket_drive.svg"
+              }
+            ]
+          }
         },
         {
           "title": "Engineering Class Sprocket",
@@ -793,12 +681,10 @@
                 "image": "images/video-btn.svg"
               },
               {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "engineering_class_sprocket_drive.svg"
               }
             ]
           }
@@ -825,8 +711,14 @@
               {
                 "type": "video",
                 "title": "Part Viewer",
-                "content": "sheave_drive.mp4",
+                "content": "sheave_drive_interactive.mp4",
                 "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "sheave_drive_interactive.svg"
               }
             ]
           }
@@ -865,15 +757,7 @@
                 "type": "image",
                 "title": "Exploded View",
                 "image": "images/exploded.png",
-                "content": "impact_beds.jpg"
-              },
-              {
-                "type": "content",
-                "title": "Information",
-                "image": "images/info.svg",
-                "content": [
-                  "<p>Information Here</p>"
-                ]
+                "content": "impact_beds.svg"
               }
             ]
           }

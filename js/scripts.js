@@ -470,6 +470,7 @@ function snap_to_start() {
   skipIntro.style.display = 'none';
   background.style.display = 'block';
   introText.style.display = 'block';
+  subtitle.style.opacity = 0;
   video.pause(); 
   video.removeEventListener('ended', start, false);
 }
