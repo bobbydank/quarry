@@ -722,6 +722,40 @@
               }
             ]
           }
+        },
+        {
+          "title": "R Screw",
+          "id": "",
+          "content": "<p><strong>R Screw</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+          "video": "videos/MS_Quarry R Screw Animation_v03_JG_trimmed.mp4",
+          "bg": "images/_0020_product r_screw_bg.jpg",
+          "buttons": [
+            {
+              "image": "images/request-quote-btn.svg",
+              "title": "Request Quote",
+              "url": "https://www.martinsprocket.com/view/companypage/contact-us/request-a-quote",
+              "target": "_blank",
+              "class": "requestquote"
+            }
+          ],
+          "partviewer": {
+            "image": "images/video-btn.svg",
+            "title": "R Screw",
+            "content": [
+              {
+                "type": "video",
+                "title": "Part Viewer",
+                "content": "r_screw.mp4",
+                "image": "images/video-btn.svg"
+              },
+              {
+                "type": "image",
+                "title": "Exploded View",
+                "image": "images/exploded.png",
+                "content": "r_screw.svg"
+              }
+            ]
+          }
         }
       ]
     },
