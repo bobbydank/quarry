@@ -724,9 +724,9 @@
           }
         },
         {
-          "title": "R Screw",
+          "title": "Screw",
           "id": "",
-          "content": "<p><strong>R Screw</strong></p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+          "content": "<p><strong>Screw</strong></p><p>Since 1969, Martin has been the industry leading screw conveyor manufacturer by delivering systems that reduce costs and increase productivity. Engineering design expertise and dedicated 24/7/365 service offers a complete system that is optimized to each user\'s unique material handling needs. Martin screw conveyors operate safely by preventing flight material buildup and providing easy access points to high wear components. Our technical design expertise and manufacturing footprint positions Martin to be the most trusted partner when conveying material in an industrial application.</p>",
           "video": "videos/MS_Quarry R Screw Animation_v03_JG_trimmed.mp4",
           "bg": "images/_0020_product r_screw_bg.jpg",
           "buttons": [
